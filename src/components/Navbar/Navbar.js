@@ -1,9 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import Card from "../UI/Card";
 import styles from "./Nabar.module.css";
 
 const Navbar = () => {
+  const cartItems = useSelector((state) => state.cart);
+
   return (
     <Card>
       <div className={styles.navbarContainer}>
@@ -27,7 +30,7 @@ const Navbar = () => {
             to="cart"
             className={(nav) => (nav.isActive ? styles.active : styles.nav)}
           >
-            MyCart 0
+            MyCart {cartItems.length}
           </NavLink>
         </div>
       </div>
