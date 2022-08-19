@@ -10,7 +10,7 @@ import ProductDetails from "./pages/ProductDetails";
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="cart" element={<Cart />} />

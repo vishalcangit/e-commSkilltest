@@ -21,20 +21,11 @@ const AllProducts = () => {
 
   useEffect(() => {
     dispatch(fetchProducts());
-
-    // const fetchProducts = async () => {
-    //   const response = await fetch(
-    //     "https://my-json-server.typicode.com/vishalcangit/e-commerce_database/items"
-    //   );
-    //   const data = await response.json();
-    //   console.log(data);
-    //   setProducts(data);
-    // };
-    // fetchProducts();
   }, []);
 
   const addToCartHandler = (product) => {
     dispatch(cartAction.add(product));
+    window.alert("Added to cart Successfully");
   };
 
   if (status === STATUSES.LOADING) {
