@@ -9,6 +9,7 @@ const ProductDetails = () => {
   const { selectedProduct } = useSelector((state) => state.product);
   const addToCartHandler = (product) => {
     dispatch(cartAction.add(product));
+    window.alert("Product Added to Cart successfully");
   };
   return (
     <div>
