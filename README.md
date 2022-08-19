@@ -23,4 +23,4 @@ Front end of an E-Commerce website able to perform CRUD Operations {dummy operat
 ## My Cart Page 
 ![Screenshot (19)](https://user-images.githubusercontent.com/105626822/185615930-f26561b7-8093-4577-923d-3ff09fe3b54d.png)
 
-# Thanks for uy time, Have a good day!!
+# Thanks for your time, Have a good day!!
