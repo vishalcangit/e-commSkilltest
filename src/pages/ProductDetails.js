@@ -8,6 +8,7 @@ const ProductDetails = () => {
   // this page shows the details of the selected product
   const dispatch = useDispatch();
   const { selectedProduct } = useSelector((state) => state.product);
+  // this function add the product to the cart
   const addToCartHandler = (product) => {
     dispatch(cartAction.add(product));
     window.alert("Product Added to Cart successfully");
