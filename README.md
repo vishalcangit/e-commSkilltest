@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Front end of an E-Commerce website able to perform CRUD Operations {dummy operations as of now} technologies used are - React.js , Redux toolkit, React-router-dom, Css Modules, HTML, Javascript....
+Project link [CrickShop](https://vishalcangit.github.io/e-commSkilltest/).
 
 ## Available Scripts
 
