@@ -7,18 +7,21 @@ import styles from "./css/EditProduct.module.css";
 const EditProduct = () => {
   const navigateBack = useNavigate();
   const param = useParams();
+  // this will get the selected product from the redux store
   const { selectedProduct } = useSelector((state) => state.product);
-  console.log(selectedProduct);
   const [name, setName] = useState(selectedProduct.name);
   const [desc, setDesc] = useState(selectedProduct.description);
   const [price, setPrice] = useState(selectedProduct.price);
 
+  // update button function
   const updateBtnClicked = (e) => {
     e.preventDefault();
     setName("");
     setPrice("");
     setDesc("");
+    // shows the alert fn to screen
     window.alert("Product Updated Successfully");
+    // this willl naviagate back to the main  home page
     navigateBack("/");
   };
 

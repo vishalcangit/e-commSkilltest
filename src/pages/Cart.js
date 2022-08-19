@@ -6,10 +6,14 @@ import styles from "./css/Cart.module.css";
 
 const Cart = () => {
   const dispatch = useDispatch();
+  // this contains the cart items imported from redux store using useSelector function
   const cartItems = useSelector((state) => state.cart);
 
+  // this manages the remove product from cart function
   const removeItemFromCartHandler = (id) => {
+    // this sends the id of the item to be removed from cart to the redix store
     dispatch(cartAction.remove(id));
+    // this will show alert notificationn on screen after success
     window.alert("Item removed from cart successfully");
   };
 
@@ -18,6 +22,7 @@ const Cart = () => {
       <h1>
         MyCart <i className="fas fa-shopping-cart"></i>
       </h1>
+      {/* this will show cart id empty is=f the cart is empty */}
       {cartItems.length === 0 && <h1>Cart is Empty!!</h1>}
       <div className={styles.cartWrapper}>
         {cartItems.map((item) => (

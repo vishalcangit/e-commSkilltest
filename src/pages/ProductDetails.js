@@ -5,6 +5,7 @@ import { cartAction } from "../store/cartSlice";
 import styles from "./css/ProductDetails.module.css";
 
 const ProductDetails = () => {
+  // this page shows the details of the selected product
   const dispatch = useDispatch();
   const { selectedProduct } = useSelector((state) => state.product);
   const addToCartHandler = (product) => {

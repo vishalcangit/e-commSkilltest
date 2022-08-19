@@ -5,8 +5,11 @@ import styles from "./css/AddProduct.module.css";
 
 const AddProduct = () => {
   const navigateBack = useNavigate();
+
   const addProductHandler = () => {
+    // this will alert the  user if the product will be added
     window.alert("Product Added Successfully");
+    // this will bring back the user to the home page apter the product is added
     navigateBack("/");
   };
   return (

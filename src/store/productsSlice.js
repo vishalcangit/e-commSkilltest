@@ -15,12 +15,15 @@ const productsSlice = createSlice({
     selectedProduct: [],
   },
   reducers: {
+    // set the products after fetching from the api to the data array
     setProducts(state, action) {
       state.data = action.payload;
     },
+    // will manage errors showing
     setStatus(state, action) {
       state.status = action.payload;
     },
+    // this action will manage the dort feature
     sort(state, action) {
       if (action.payload === true) {
         state.isSorted = true;
@@ -34,15 +37,19 @@ const productsSlice = createSlice({
         });
       }
     },
+    // this will manage the data to pages like product details and edit products
     select(state, action) {
       state.selectedProduct = state.data[action.payload - 1];
     },
   },
 });
 
+// product actions like setProducts,sort,status,select is exported whick can be imported and used in pages
 export const productsAction = productsSlice.actions;
+// this export will be needed for store to configure the slice
 export default productsSlice.reducer;
 
+// this is thunk middleware function call as we cannot call async function in reducers so this is used
 // thunks
 export function fetchProducts() {
   return async function fetchProductsThunk(dispatch, getState) {
@@ -50,6 +57,7 @@ export function fetchProducts() {
 
     try {
       const response = await fetch(
+        // the dummy api which i have created
         "https://my-json-server.typicode.com/vishalcangit/e-commerce_database/items"
       );
       const data = await response.json();
