@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import AddProduct from "./pages/AddProduct";
 import Cart from "./pages/Cart";
 import EditProduct from "./pages/EditProduct";
+import Error from "./pages/Error";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="add-product" element={<AddProduct />} />
         <Route path="edit-product/:productId" element={<EditProduct />} />
         <Route path="product-details/:productId" element={<ProductDetails />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );

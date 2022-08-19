@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "../components/UI/Card";
 import { cartAction } from "../store/cartSlice";
-import styles from "./Cart.module.css";
+import styles from "./css/Cart.module.css";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -10,18 +10,20 @@ const Cart = () => {
 
   const removeItemFromCartHandler = (id) => {
     dispatch(cartAction.remove(id));
+    window.alert("Item removed from cart successfully");
   };
 
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>
+      <h1>
         MyCart <i className="fas fa-shopping-cart"></i>
       </h1>
+      {cartItems.length === 0 && <h1>Cart is Empty!!</h1>}
       <div className={styles.cartWrapper}>
         {cartItems.map((item) => (
           <Card>
             <div className={styles.cartItemContainer}>
-              <img className={styles.cartImg} src={item.image} />
+              <img className={styles.cartImg} src={item.image} alt="img" />
               <h3>{item.name}</h3>
               <h4>Rs: {item.price}</h4>
               <button
@@ -39,7 +41,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-{
-  /* <img src={item.img}></img> */
-}

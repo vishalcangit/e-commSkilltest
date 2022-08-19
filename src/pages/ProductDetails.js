@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "../components/UI/Card";
 import { cartAction } from "../store/cartSlice";
-import styles from "./ProductDetails.module.css";
+import styles from "./css/ProductDetails.module.css";
 
 const ProductDetails = () => {
   const dispatch = useDispatch();

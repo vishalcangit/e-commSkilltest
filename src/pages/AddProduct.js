@@ -1,8 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "../components/UI/Card";
-import styles from "./AddProduct.module.css";
+import styles from "./css/AddProduct.module.css";
 
 const AddProduct = () => {
+  const navigateBack = useNavigate();
+  const addProductHandler = () => {
+    window.alert("Product Added Successfully");
+    navigateBack("/");
+  };
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Add a new Product...</h1>
@@ -14,7 +20,7 @@ const AddProduct = () => {
           </div>
           <div>
             <label>Enter product Description : </label>
-            <textarea required rows={5} cols={50}></textarea>
+            <textarea required rows={5} cols={101}></textarea>
           </div>
           <div>
             <label>Enter product Price : </label>
@@ -28,7 +34,12 @@ const AddProduct = () => {
               placeholder="attac product image"
             ></input>
           </div>
-          <button className={styles.addProductButton}>Add Product</button>
+          <button
+            onClick={addProductHandler}
+            className={styles.addProductButton}
+          >
+            Add Product
+          </button>
         </form>
       </Card>
     </div>

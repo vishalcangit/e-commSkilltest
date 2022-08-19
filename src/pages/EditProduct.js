@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import Card from "../components/UI/Card";
-import styles from "./EditProduct.module.css";
+import styles from "./css/EditProduct.module.css";
 
 const EditProduct = () => {
   const navigateBack = useNavigate();
