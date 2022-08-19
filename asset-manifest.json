@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/e-commSkilltest/static/css/main.953d7ac3.css",
-    "main.js": "/e-commSkilltest/static/js/main.6ffc1322.js",
+    "main.js": "/e-commSkilltest/static/js/main.6bfb0b06.js",
     "index.html": "/e-commSkilltest/index.html",
     "main.953d7ac3.css.map": "/e-commSkilltest/static/css/main.953d7ac3.css.map",
-    "main.6ffc1322.js.map": "/e-commSkilltest/static/js/main.6ffc1322.js.map"
+    "main.6bfb0b06.js.map": "/e-commSkilltest/static/js/main.6bfb0b06.js.map"
   },
   "entrypoints": [
     "static/css/main.953d7ac3.css",
-    "static/js/main.6ffc1322.js"
+    "static/js/main.6bfb0b06.js"
   ]
 }
